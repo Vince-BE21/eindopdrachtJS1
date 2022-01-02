@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dag van de week</title>
+    <script text="text/javascript">
+    "use strict";
+    let dagBenamingen = ["maandag", "dinsdag", "woensdag", "donderdag","vrijdag", "zaterdag", "zondag"];
+    let d = new Date();
+    let dag = dagBenamingen[d.getDay()];
+
+    let WelkeDag = (input) => {
+        if (input.includes("maandag") || input.includes("dinsdag") || input.includes("woensdag") || input.includes("donderdag") || input.includes("vrijdag")){
+            document.write(`<p>Vandaag is "${dag}" <br>
+            Het is een werkdag, aan de slag dus.</p>`);
+        }
+        else if (input.includes("zaterdag") || input.includes("zondag")){
+            document.write(`<p>Vandaag is "${dag}" <br>
+                Het is weekend, even bekomen.</p>`);
+        }
+    }
+
+    WelkeDag(dag);
+
+    </script>
+   
+</head>
+<body>
+    
+</body>
+</html>
