@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Koffie voor de rest van je leven!</title>
+    <script text="text/javascript">
+     
+    
+    function berekenHoeveelheid(){
+        let geboortejaar =prompt("Wat is je geboortejaar?");
+        let leeftijd =prompt("Hoe oud denk je te worden?");
+        let koffie =prompt("Hoeveel koppen koffie drink je per dag?");
+
+        if (geboortejaar == null || leeftijd == null || koffie == null) {
+                document.write(`<p>U heeft ergens geannuleerd.</p>`);
+                return false;
+            }
+
+        else if (geboortejaar.length == 0 || leeftijd.length == 0 || koffie.length == 0){
+                document.write(`<p>U heeft een van de vragen blanco gelaten.</p>`);
+                return false;
+            }
+        
+        else if (isNaN(geboortejaar) || isNaN(leeftijd) || isNaN(koffie)) {
+                document.write(`<p>Graag overal een getal ingeven!</p>`);
+                return false;
+            }
+        else {
+            let tonen = (input) => {
+            let ouderdom = 2022 - input;
+            let aantalkoppen = (parseInt(leeftijd) - ouderdom)*365*parseInt(koffie); 
+            document.write(`<p>Je bent nu ${ouderdom}. Tegen ${koffie} koppen koffie per dag zal je ${aantalkoppen} koppen koffie drinken als je ${leeftijd} jaar oud zal worden.</p>`);
+
+        }
+          tonen(geboortejaar);
+        }
+        }
+    
+
+    berekenHoeveelheid();
+
+   
+   
+    </script>
+     
+
+
+
+
+
+
+
+   
+</head>
+<body>
+    
+</body>
+</html>
